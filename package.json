@@ -1,34 +1,28 @@
 {
-  "name": "urban-alert",
+  "name": "back_unihack",
   "version": "1.0.0",
-  "main": "index.ts",
+  "description": "",
+  "license": "ISC",
+  "author": "",
+  "type": "module",
+  "main": "./src/index.js",
   "scripts": {
-    "start": "expo start",
-    "android": "expo start --android",
-    "ios": "expo start --ios",
-    "web": "expo start --web"
+    "start": "node ./src/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon ./src/index.js",
+    "expose": "ngrok http 3000 --host-header=\"localhost:3000\"",
+    "add:ngrokToken": "ngrok config add-authtoken 35OT2IOpqDBeV56nRZL5UapGQXG_4dnVCm2W9ZmBh8w7Pi7UL"
   },
   "dependencies": {
-    "@react-native-community/datetimepicker": "8.4.4",
-    "@react-navigation/bottom-tabs": "^7.8.5",
-    "@react-navigation/native": "^7.1.20",
-    "@react-navigation/native-stack": "^7.6.3",
-    "axios": "^1.13.2",
-    "expo": "~54.0.23",
-    "expo-location": "~19.0.7",
-    "expo-secure-store": "~15.0.7",
-    "expo-status-bar": "~3.0.8",
-    "jotai": "^2.15.1",
-    "jwt-decode": "^4.0.0",
-    "react": "19.1.0",
-    "react-native": "0.81.5",
-    "react-native-maps": "1.20.1",
-    "react-native-safe-area-context": "~5.6.0",
-    "react-native-screens": "~4.16.0"
-  },
-  "devDependencies": {
-    "@types/react": "~19.1.0",
-    "typescript": "~5.9.2"
-  },
-  "private": true
+    "@prisma/client": "^6.19.0",
+    "@types/express": "^5.0.5",
+    "@types/node": "^24.10.1",
+    "bcrypt": "^6.0.0",
+    "dotenv": "^17.2.3",
+    "express": "^5.1.0",
+    "jsonwebtoken": "^9.0.2",
+    "ngrok": "^5.0.0-beta.2",
+    "nodemon": "^3.1.11",
+    "prisma": "^6.19.0"
+  }
 }
